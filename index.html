@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S6 Lite 밀크T 런처 설치</title>
+  <link rel="stylesheet" href="s6lite.css">
+  <script src="s6lite.js" defer></script>
+</head>
+<body>
+
+  <!-- 상단 네비게이션 (뒤로가기, 다음 버튼만) -->
+  <div class="top-navigation">
+    <button class="back-btn" id="backBtn" onclick="handleBackClick()">← 기종 선택으로</button>
+    <button class="next-btn" id="nextBtn" onclick="handleNextClick()">다음 단계로 →</button>
+  </div>
+
+  <!-- 탭 메뉴를 별도 영역으로 분리 -->
+  <div class="mobile-tab-menu">
+    <button class="tab active" onclick="showTab(0)">1. 안드로이드 버전 확인</button>
+    <button class="tab" onclick="showTab(1)">2. 런처 설치</button>
+  </div>
+
+  <div class="tab-content active">
+    <div class="scroll-images" id="scrollImages0">
+      <!-- 이미지들이 JavaScript로 동적 생성됩니다 -->
+    </div>
+  </div>
+
+  <div class="tab-content">
+    <div class="scroll-images" id="scrollImages1">
+      <!-- 이미지들이 JavaScript로 동적 생성됩니다 -->
+    </div>
+  </div>
+
+  <!-- 풀스크린 모달 -->
+  <div id="imageModal" class="modal">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <button class="modal-nav prev" onclick="navigateModal(-1)">&#10094;</button>
+    <img id="modalImage" class="modal-content" />
+    <button class="modal-nav next" onclick="navigateModal(1)">&#10095;</button>
+  </div>
+
+  <!-- 맨 위로 버튼 -->
+  <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">
+    ↑
+  </button>
+  
+</body>
+</html>
